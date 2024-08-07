@@ -1,0 +1,121 @@
+/* Variables */
+:root {
+  --color-accent-light: #d9edbf;
+  --color-accent: #ff9800;
+  --color-primary: #2c7865;
+  --color-primary-light: #90d26d;
+  --color-primary-dark: #003333;
+  --fs-xxl: 3.815rem;
+  --fs-xl: 3.052rem;
+  --fs-l: 1.953rem;
+  --fs-m: 1.563rem;
+  --fs-reg: 1rem;
+  --fs-s: 0.8rem;
+  --ff-heading: 'Pilcrow Rounded', sans-serif;
+  --ff-body: 'Archivo', sans-serif;
+  --spacing-xxl: 3.75rem;
+  --spacing-xl: 2.5rem;
+  --spacing-l: 1.75rem;
+  --spacing-m: 1rem;
+  --spacing-s: 0.75rem;
+  --spacing-xs: 0.5rem;
+  --spacing-xxs: 0.25rem;
+}
+
+/* Resets */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  font-family: var(--ff-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Reusable Class */
+.container {
+  max-width: 1440px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.d-flex {
+  display: flex;
+}
+
+/* HEADER */
+header {
+  background-color: var(--color-primary-dark);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: var(--spacing-m);
+}
+
+.logo-header {
+  width: 144px;
+}
+
+.nav-item {
+  list-style: none;
+  display: flex;
+  gap: var(--spacing-l);
+}
+
+.nav-list {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.nav-link {
+  color: white;
+  font-family: var(--ff-heading);
+  text-decoration: none;
+  font-size: var(--fs-m);
+  transition: color 0.2s ease;
+}
+
+.nav-list:hover {
+  transform: translateY(-3px);
+}
+
+.nav-list:hover .nav-link {
+  color: var(--color-primary-light);
+}
