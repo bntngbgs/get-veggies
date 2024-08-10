@@ -257,13 +257,13 @@ header {
   /* background-color: lightseagreen; */
   display: flex;
   /* gap: var(--spacing-m); */
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   /* background-color: var(--color-primary-dark); */
   /* padding-inline: var(--spacing-xl); */
   /* padding-block: var(--spacing-l); */
   border-radius: 12px;
-  margin-bottom: 12rem;
+  /* margin-bottom: 12rem; */
   flex-direction: row-reverse;
   /* padding-right: 0; */
 }
@@ -303,6 +303,7 @@ header {
   /* gap: var(--spacing-xs); */
   /* background-color: var(--color-accent-light); */
   justify-content: space-between;
+  /* align-items: center; */
   border-radius: 36px;
   /* padding-block: var(--spacing-m); */
   /* padding-inline: var(--spacing-s); */
@@ -328,9 +329,10 @@ header {
 .card {
   /* background-color: var(--color-accent-light); */
   width: 280px;
+  /* height: max-content; */
   border-radius: 28px;
   padding-block: var(--spacing-s);
-  padding-inline: var(--spacing-l);
+  padding-inline: var(--spacing-m);
   border: 2px solid var(--color-primary);
   /* box-shadow: rgba(44, 120, 101, 0.2) 0px 7px 29px 0px; */
   /* box-shadow: rgba(217, 237, 191, 0.25) 0px 14px 28px,
@@ -354,10 +356,12 @@ header {
 
 .card h3 {
   color: var(--color-primary);
+  margin-bottom: var(--spacing-xs);
 }
 
 .card p {
-  margin-bottom: var(--spacing-s);
+  margin-bottom: var(--spacing-m);
+  line-height: 1.4;
 }
 
 .card .btn {
@@ -365,4 +369,54 @@ header {
   display: block;
   width: 80%;
   margin-inline: auto;
+}
+
+/*  */
+
+.desc-card-outer {
+  background-color: var(--color-primary);
+  margin-top: 12.5rem;
+}
+
+.desc-card-outer > h2 {
+  font-family: var(--ff-heading);
+  color: white;
+  text-align: center;
+  font-size: var(--fs-xl);
+  padding-top: var(--spacing-s);
+}
+
+.desc-card-container {
+  display: grid;
+  gap: var(--spacing-m);
+  grid-template-columns: repeat(2, 460px);
+  justify-content: center;
+  padding-bottom: var(--spacing-xl);
+  padding-top: var(--spacing-m);
+}
+
+.desc-card {
+  padding: var(--spacing-l);
+  border-radius: 12px;
+  background-color: var(--color-accent-light);
+}
+
+.desc-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-m);
+}
+
+.desc-card-header {
+  margin-bottom: var(--spacing-s);
+}
+
+.desc-card-header h3 {
+  color: var(--color-primary-dark);
+  font-family: var(--ff-heading);
+  font-size: 1.25rem;
+}
+
+.desc-card img {
+  width: 64px;
 }
