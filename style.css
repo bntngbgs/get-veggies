@@ -376,24 +376,51 @@ header {
 .desc-card-outer {
   background-color: var(--color-primary);
   margin-top: 12.5rem;
+  background-image: url(/bg-pattern.svg);
+  background-repeat: no-repeat;
+  background-size: 640px;
+  /* background-size: contain; */
+  /* background-position: bottom left; */
+  padding-top: var(--spacing-m);
+  margin-bottom: 12rem;
 }
 
 .desc-card-outer > h2 {
   font-family: var(--ff-heading);
+  /* display: inline-block; */
+  /* margin-inline: auto; */
+  justify-content: center;
   color: white;
+  width: max-content;
+  margin-inline: auto;
+  padding-inline: var(--spacing-xs);
+  border-radius: 36px;
+  background-color: var(--color-primary);
   text-align: center;
-  font-size: var(--fs-xl);
-  padding-top: var(--spacing-s);
+  font-size: var(--fs-xxl);
+  /* padding-top: var(--spacing-s); */
+  /* margin-top: var(--spacing-s); */
 }
 
 .desc-card-container {
+  display: grid;
+  gap: var(--spacing-m);
+  grid-template-columns: repeat(2, 520px);
+  justify-content: center;
+  padding-bottom: var(--spacing-xl);
+  padding-top: var(--spacing-m);
+}
+
+/* BACKUP */
+/* .desc-card-container {
   display: grid;
   gap: var(--spacing-m);
   grid-template-columns: repeat(2, 460px);
   justify-content: center;
   padding-bottom: var(--spacing-xl);
   padding-top: var(--spacing-m);
-}
+} */
+/* BACKUP */
 
 .desc-card {
   padding: var(--spacing-l);
@@ -414,9 +441,13 @@ header {
 .desc-card-header h3 {
   color: var(--color-primary-dark);
   font-family: var(--ff-heading);
-  font-size: 1.25rem;
+  font-size: var(--fs-m);
 }
 
 .desc-card img {
   width: 64px;
+}
+
+.desc-card-text {
+  /* font-weight: 200; */
 }
