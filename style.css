@@ -13,7 +13,9 @@
   --fs-s: 0.8rem;
   --ff-heading: 'Pilcrow Rounded', sans-serif;
   --ff-body: 'Archivo', sans-serif;
-  --spacing-xxl: 3.75rem;
+  --spacing-4xl: 12.5rem;
+  --spacing-3xl: 6.25rem;
+  --spacing-2xl: 3.75rem;
   --spacing-xl: 2.5rem;
   --spacing-l: 1.75rem;
   --spacing-m: 1rem;
@@ -149,7 +151,7 @@ header {
 .hero-section {
   display: flex;
   position: relative;
-  margin-top: var(--spacing-xxl);
+  margin-top: var(--spacing-3xl);
   align-items: center;
 }
 
