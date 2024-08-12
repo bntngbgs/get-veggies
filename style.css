@@ -103,6 +103,14 @@ h6 {
   cursor: pointer;
 }
 
+.section-header {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-xxl);
+  line-height: 1.1;
+  color: var(--color-primary);
+  text-align: center;
+}
+
 /* HEADER */
 header {
   background-color: var(--color-primary-dark);
@@ -275,13 +283,10 @@ header {
 }
 
 .product-text p {
-  font-family: var(--ff-heading);
-  font-size: var(--fs-xxl);
   text-align: center;
   /* color: white; */
   width: 16ch;
-  line-height: 1.1;
-  color: var(--color-primary);
+
   /* align-self: center; */
 }
 
@@ -384,11 +389,10 @@ header {
   /* background-size: contain; */
   /* background-position: bottom left; */
   padding-top: var(--spacing-m);
-  margin-bottom: 12rem;
+  /* margin-bottom: 12rem; */
 }
 
 .desc-card-outer > h2 {
-  font-family: var(--ff-heading);
   /* display: inline-block; */
   /* margin-inline: auto; */
   justify-content: center;
@@ -398,8 +402,6 @@ header {
   padding-inline: var(--spacing-xs);
   border-radius: 36px;
   background-color: var(--color-primary);
-  text-align: center;
-  font-size: var(--fs-xxl);
   /* padding-top: var(--spacing-s); */
   /* margin-top: var(--spacing-s); */
 }
@@ -452,4 +454,29 @@ header {
 
 .desc-card-text {
   /* font-weight: 200; */
+}
+
+/*  */
+.values-description-container {
+  margin-top: 12.5rem;
+}
+
+.values-description {
+  margin-top: var(--spacing-2xl);
+}
+
+.values {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.values img {
+  width: 520px;
+}
+
+.values p {
+  width: 45ch;
+  font-size: 1.25rem;
+  font-weight: 200;
 }
