@@ -13,6 +13,7 @@
   --fs-s: 0.8rem;
   --ff-heading: 'Pilcrow Rounded', sans-serif;
   --ff-body: 'Archivo', sans-serif;
+  --ff-accent: 'Caveat', cursive;
   --spacing-4xl: 12.5rem;
   --spacing-3xl: 6.25rem;
   --spacing-2xl: 3.75rem;
@@ -109,6 +110,10 @@ h6 {
   line-height: 1.1;
   color: var(--color-primary);
   text-align: center;
+}
+
+.reversed-flex {
+  flex-direction: row-reverse;
 }
 
 /* HEADER */
@@ -462,21 +467,80 @@ header {
 }
 
 .values-description {
-  margin-top: var(--spacing-2xl);
+  margin-top: var(--spacing-3xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3xl);
+  position: relative;
 }
 
 .values {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
-.values img {
+.values .figure-container {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  background-color: rgb(243, 243, 243);
+  border: 1px solid lightgray;
+  padding: var(--spacing-m);
+  /* height: 348px; */
+}
+
+.values:nth-child(2n) .figure-container:first-of-type {
+  transform: rotate(3deg);
+}
+
+.values:nth-child(2n + 1) .figure-container:first-of-type {
+  transform: rotate(-2deg);
+}
+
+.values .figure-container figure {
   width: 520px;
+}
+
+.values .figure-container figcaption {
+  font-size: var(--fs-l);
+  font-family: var(--ff-heading);
+  margin-top: var(--spacing-m);
+  font-family: var(--ff-accent);
+  font-weight: 700;
+  text-align: center;
+}
+
+figure img {
+  /* height: 100%; */
+  width: 100%;
+  height: 348px;
+  object-fit: cover;
 }
 
 .values p {
   width: 45ch;
   font-size: 1.25rem;
   font-weight: 200;
+  line-height: 1.6;
+}
+
+.circle-blob {
+  width: 36px;
+  height: 36px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  /* align-self: center; */
+}
+
+.values-timeline {
+  width: 84px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.shadow-light {
+  box-shadow: 0 0 40px var(--color-primary-dark);
 }
