@@ -457,9 +457,9 @@ header {
   width: 64px;
 }
 
-.desc-card-text {
-  /* font-weight: 200; */
-}
+/* .desc-card-text { */
+/* font-weight: 200; */
+/* } */
 
 /*  */
 .values-description-container {
@@ -533,9 +533,9 @@ figure img {
 }
 
 .values-timeline {
-  width: 84px;
+  width: 76px;
   position: absolute;
-  top: 0;
+  top: 32px;
   left: 50%;
   transform: translateX(-50%);
   z-index: -1;
@@ -543,4 +543,99 @@ figure img {
 
 .shadow-light {
   box-shadow: 0 0 40px var(--color-primary-dark);
+}
+
+/*  */
+
+.contact-container {
+  margin-top: var(--spacing-4xl);
+  background-color: var(--color-accent-light);
+  padding-block: var(--spacing-xl);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+  width: 100%;
+  margin-top: var(--spacing-l);
+}
+
+.contact-form input {
+  border-radius: 8px;
+  border: 1px solid var(--color-primary-light);
+  padding-block: var(--spacing-s);
+  padding-inline: var(--spacing-m);
+  padding-left: 44px;
+}
+
+.contact-form .input-wrapper:first-of-type input {
+  background-image: url(user-solid.svg);
+  background-repeat: no-repeat;
+  background-size: 14px;
+  background-position: 18px 14px;
+}
+
+.contact-form .input-wrapper:nth-of-type(2) input {
+  background-image: url(envelope-solid.svg);
+  background-repeat: no-repeat;
+  background-size: 14px;
+  background-position: 18px 16px;
+}
+
+.contact-form .input-wrapper textarea {
+  background-image: url(comment-dots-solid.svg);
+  background-repeat: no-repeat;
+  background-size: 14px;
+  background-position: 18px 16px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: grey;
+}
+
+/* .contact-form .input-wrapper:first-of-type input::placeholder {
+  background-image: url(user-solid.svg);
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: -10px 2px;
+} */
+
+.contact-form textarea {
+  border: 1px solid var(--color-primary-light);
+  padding-block: var(--spacing-s);
+  padding-inline: var(--spacing-m);
+  resize: none;
+  height: 112px;
+  border-radius: 12px;
+  padding-left: 44px;
+}
+
+.contact-form label {
+  margin-bottom: 0.2rem;
+}
+
+.contact-form button {
+  width: 600px;
+  margin-top: var(--spacing-xs);
+}
+
+.contact-container .container > p {
+  margin-top: var(--spacing-xs);
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.input-wrapper {
+  width: 600px;
+}
+
+.input-wrapper > * {
+  width: 100%;
+}
+
+.input-wrapper label {
+  display: block;
 }
