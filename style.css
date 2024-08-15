@@ -551,6 +551,10 @@ figure img {
   margin-top: var(--spacing-4xl);
   background-color: var(--color-accent-light);
   padding-block: var(--spacing-xl);
+  background-image: url(/bg-contact-form.svg);
+  background-repeat: repeat-x;
+  background-size: 560px;
+  background-position: 10px 420px;
 }
 
 .contact-form {
@@ -638,4 +642,30 @@ figure img {
 
 .input-wrapper label {
   display: block;
+}
+
+/*  */
+
+.footer {
+  background-color: var(--color-primary-dark);
+  padding-block: var(--spacing-2xl);
+  color: white;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-item > img {
+  width: 160px;
+  margin-bottom: var(--spacing-m);
+}
+
+.footer-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-list-item {
 }
