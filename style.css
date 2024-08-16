@@ -648,13 +648,25 @@ figure img {
 
 .footer {
   background-color: var(--color-primary-dark);
-  padding-block: var(--spacing-2xl);
+  padding-top: var(--spacing-2xl);
+  padding-bottom: var(--spacing-xl);
   color: white;
+  /* border-top: 5px solid var(--color-primary); */
 }
 
 .footer-container {
   display: flex;
   justify-content: space-between;
+}
+
+.footer-item h4 {
+  font-size: 1.25rem;
+  color: lightblue;
+  margin-bottom: var(--spacing-m);
+}
+
+.footer-item:first-child p:nth-child(2) {
+  margin-bottom: var(--spacing-xs);
 }
 
 .footer-item > img {
@@ -668,4 +680,34 @@ figure img {
 }
 
 .footer-list-item {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-list-item svg path {
+  transition: fill 0.3s ease;
+}
+
+.footer-list-item:hover {
+  color: var(--color-accent);
+}
+
+.footer-list-item:hover svg path {
+  fill: var(--color-accent);
+}
+
+.footer-list-item + .footer-list-item {
+  margin-top: var(--spacing-xs);
+}
+
+.footer-item:last-of-type .footer-list .footer-list-item {
+  display: flex;
+  /* height: 28px; */
+  /* width: 90px; */
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-list-item svg {
+  width: 18px;
 }
