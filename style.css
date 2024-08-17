@@ -171,6 +171,7 @@ header {
 .hero-description {
   margin-top: var(--spacing-l);
   position: relative;
+  animation: slide-right 1s ease;
 }
 
 .hero-description span::after {
@@ -710,4 +711,17 @@ figure img {
 
 .footer-list-item svg {
   width: 18px;
+}
+
+/* Animation */
+@keyframes slide-right {
+  from {
+    transform: translateX(-20%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
