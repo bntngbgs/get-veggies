@@ -250,20 +250,25 @@ header {
   margin-top: -28px;
   /* mix-blend-mode: multiply; */
   object-position: -470px;
+  animation: slide-down 1s ease;
 }
 
 .highlight-image:nth-of-type(2) img {
   margin-top: 28px;
+  animation: slide-up 1s ease 0.1s;
+  /* opacity: 0; */
 }
 
 .highlight-image:nth-of-type(3) img {
   margin-top: -12px;
   object-position: -320px;
+  animation: slide-down 1s ease 0.2s;
 }
 
 .highlight-image:nth-of-type(4) img {
   margin-top: 20px;
   object-position: -130px;
+  animation: slide-up 1s ease 0.3s;
 }
 
 /* ===== */
@@ -717,6 +722,30 @@ figure img {
 @keyframes slide-right {
   from {
     transform: translateX(-20%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(20%);
     opacity: 0;
   }
 
