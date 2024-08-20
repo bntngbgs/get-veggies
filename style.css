@@ -121,6 +121,8 @@ header {
   background-color: var(--color-primary-dark);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  /* opacity: 0; */
+  /* transform: translateY(300px); */
 }
 
 .header {
@@ -128,6 +130,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding-block: var(--spacing-m);
+  animation: slide-down 1s ease;
+  animation-fill-mode: forwards;
 }
 
 .logo-header {
@@ -183,10 +187,12 @@ header {
   background-repeat: no-repeat;
   /* background-size: 200px; */
   position: absolute;
-
   top: 94px;
   left: 240px;
   z-index: -1;
+  opacity: 0;
+  animation: stroke 1s ease 1s;
+  animation-fill-mode: forwards;
 }
 
 .hero-description h1 {
@@ -250,25 +256,34 @@ header {
   margin-top: -28px;
   /* mix-blend-mode: multiply; */
   object-position: -470px;
-  animation: slide-down 1s ease;
+  opacity: 0;
+  animation: slide-down 0.7s ease;
+  animation-fill-mode: forwards;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 
 .highlight-image:nth-of-type(2) img {
   margin-top: 28px;
-  animation: slide-up 1s ease 0.1s;
+  opacity: 0;
+  animation: slide-up 0.5s ease 0.1s;
+  animation-fill-mode: forwards;
   /* opacity: 0; */
 }
 
 .highlight-image:nth-of-type(3) img {
   margin-top: -12px;
   object-position: -320px;
-  animation: slide-down 1s ease 0.2s;
+  opacity: 0;
+  animation: slide-down 0.8s ease 0.2s;
+  animation-fill-mode: forwards;
 }
 
 .highlight-image:nth-of-type(4) img {
   margin-top: 20px;
   object-position: -130px;
-  animation: slide-up 1s ease 0.3s;
+  opacity: 0;
+  animation: slide-up 0.7s ease 0.3s;
+  animation-fill-mode: forwards;
 }
 
 /* ===== */
@@ -291,6 +306,9 @@ header {
 
 .product-text {
   position: relative;
+  animation: slide-left linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 .product-text p {
@@ -323,6 +341,9 @@ header {
   justify-content: space-between;
   /* align-items: center; */
   border-radius: 36px;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
   /* padding-block: var(--spacing-m); */
   /* padding-inline: var(--spacing-s); */
   /* padding-right: 0; */
@@ -730,6 +751,17 @@ figure img {
     opacity: 1;
   }
 }
+@keyframes slide-left {
+  from {
+    transform: translateX(20%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
 @keyframes slide-down {
   from {
@@ -752,5 +784,29 @@ figure img {
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@keyframes stroke {
+  from {
+    opacity: 0;
+    clip-path: inset(0 100% 100% 0);
+  }
+
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
   }
 }
