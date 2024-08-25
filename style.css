@@ -311,9 +311,6 @@ header {
 
 .product-text {
   position: relative;
-  animation: slide-left linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;
 }
 
 .product-text p {
@@ -346,9 +343,6 @@ header {
   justify-content: space-between;
   /* align-items: center; */
   border-radius: 36px;
-  animation: appear linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;
   /* padding-block: var(--spacing-m); */
   /* padding-inline: var(--spacing-s); */
   /* padding-right: 0; */
