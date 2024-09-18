@@ -330,7 +330,6 @@ header {
   background-repeat: no-repeat;
   /* background-size: 200px; */
   position: absolute;
-
   top: 106px;
   left: 50px;
   z-index: -1;
@@ -811,4 +810,8 @@ figure img {
     opacity: 1;
     scale: 1;
   }
+}
+
+/* ~ MEDIA QUERY */
+@media (max-width: 1024px) {
 }
